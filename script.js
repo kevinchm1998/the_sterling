@@ -498,3 +498,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // 當免責聲明關閉時啟動音樂
     window.startBackgroundMusic = startMusic;
 });
+
+// 敬請期待彈窗：桌面版及手機版所有 .coming-soon 項目
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('comingSoonModal');
+    const closeButton = document.getElementById('comingSoonClose');
+    const overlay = modal ? modal.querySelector('.coming-soon-overlay') : null;
+
+    if (!modal || !closeButton) {
+        return;
+    }
+
+    function openComingSoon(event) {
+        event.preventDefault();
+
+        // 手機版：先收起選單
+        document.querySelector('.mobile-menu')?.classList.remove('active');
+        document.querySelector('.menu-overlay')?.classList.remove('active');
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeComingSoon() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('a.coming-soon').forEach(function (link) {
+        link.addEventListener('click', openComingSoon);
+    });
+
+    closeButton.addEventListener('click', closeComingSoon);
+    overlay?.addEventListener('click', closeComingSoon);
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && modal.classList.contains('active')) {
+            closeComingSoon();
+        }
+    });
+});

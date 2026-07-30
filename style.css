@@ -1,4 +1,4 @@
-/* 重置和變數 */
+/* ?蔭????*/
 * { 
     box-sizing: border-box; 
     margin: 0;
@@ -35,7 +35,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 頭部導航 */
+/* ?剝撠 */
 header {
     position: fixed;
     top: 0;
@@ -75,7 +75,7 @@ header {
     white-space: nowrap;
 }
 
-/* 漢堡選單按鈕 */
+/* 瞍Ｗ?詨?? */
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -97,7 +97,7 @@ header {
     transform-origin: center;
 }
 
-/* 電腦版導航 */
+/* ?餉????*/
 .main-nav {
     display: flex;
     align-items: stretch;
@@ -153,14 +153,14 @@ header {
     color: var(--c-white);
 }
 
-/* 手機版選單 - 重新整理 */
+/* ?????- ??渡? */
 .mobile-menu {
     position: fixed;
     top: 0;
     right: -100%;
     width: 300px;
     height: 100vh;
-    background: var(--c-white); /* 純白色背景 */
+    background: var(--c-white); /* 蝝?脰???*/
     box-shadow: -5px 0 25px rgba(0,0,0,0.15);
     z-index: 1002;
     transition: right 0.3s ease;
@@ -180,7 +180,7 @@ header {
 
 .mobile-menu ul li {
     margin: 0;
-    border-bottom: 1px solid var(--c-grey-ultra-light); /* 淺灰色分隔線 */
+    border-bottom: 1px solid var(--c-grey-ultra-light); /* 瘛箇?脣??? */
 }
 
 .mobile-menu ul li:last-child {
@@ -190,18 +190,18 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 16px 25px;
-    color: var(--c-grey-dark); /* 深灰色文字 */
+    color: var(--c-grey-dark); /* 瘛梁?脫?摮?*/
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background: var(--c-white); /* 純白色背景 */
-    font-weight: normal; /* 確保所有文字都是正常粗細 */
+    background: var(--c-white); /* 蝝?脰???*/
+    font-weight: normal; /* 蝣箔????摮?舀迤撣貊?蝝?*/
 }
 
-/* 移除頭4個選項的粗體和特殊樣式 */
+/* 蝘駁?????蝎??畾見撘?*/
 .mobile-menu ul li:nth-child(-n+4) a {
-    /* 移除 font-weight: 600 */
+    /* 蝘駁 font-weight: 600 */
     font-weight: normal;
     background: var(--c-white);
     border-left: none;
@@ -209,13 +209,13 @@ header {
 
 .mobile-menu ul li:nth-child(n+5) a {
     font-size: 0.85rem;
-    padding-left: 25px; /* 取消縮進 */
+    padding-left: 25px; /* ??蝮桅?*/
     background: var(--c-white);
 }
 
-/* 統一的懸停效果 */
+/* 蝯曹??????*/
 .mobile-menu ul li a:hover {
-    background-color: var(--c-primary); /* 主色懸停 */
+    background-color: var(--c-primary); /* 銝餉?詨? */
     color: var(--c-white);
 }
 
@@ -234,87 +234,14 @@ header {
     display: block;
 }
 
-/* 主內容區域 */
+/* 銝餃摰孵???*/
 main {
     margin-top: 70px;
     min-height: calc(100vh - 70px);
 }
 
-/* 第1頁：影片頁面 */
-.hero-video {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
 
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.video-overlay {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 2;
-}
-
-.scroll-indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    color: var(--c-white);
-}
-
-.scroll-indicator span {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.9;
-    font-weight: 300;
-}
-
-.arrow {
-    width: 1px;
-    height: 40px;
-    background: var(--c-white);
-    position: relative;
-    animation: bounce 2s infinite;
-}
-
-.arrow::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: -4px;
-    width: 8px;
-    height: 8px;
-    border-right: 1px solid var(--c-white);
-    border-bottom: 1px solid var(--c-white);
-    transform: rotate(45deg);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-8px);
-    }
-    60% {
-        transform: translateY(-4px);
-    }
-}
-
-/* 第2頁：關於區域 */
+/* 蝚???????*/
 .about-section {
     min-height: 100vh;
     padding: 6rem 2rem;
@@ -393,7 +320,7 @@ main {
     margin-top: 3rem;
 }
 
-/* 按鈕樣式 */
+/* ??璅?? */
 .btn {
     padding: 1.2rem 2.5rem;
     border: 2px solid var(--c-white);
@@ -425,8 +352,8 @@ main {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* 第3頁：Bohemian Collection */
-.bohemian-collection {
+/* 華潤置地 */
+.華潤置地 {
     min-height: 100vh;
     padding: 6rem 2rem;
     display: flex;
@@ -492,7 +419,7 @@ main {
     color: var(--c-white);
 }
 
-/* 圖片網格 */
+/* ??蝬脫 */
 .collection-grid {
     flex: 1.5;
     display: grid;
@@ -516,9 +443,9 @@ main {
 }
 
 .grid-image {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
 }
@@ -561,7 +488,7 @@ main {
     margin: 0;
 }
 
-/* 第4頁：聯絡我們 */
+/* 蝚????舐窗??*/
 .contact {
     min-height: 80vh;
     padding: 6rem 2rem;
@@ -606,7 +533,7 @@ main {
     justify-content: center;
 }
 
-/* 頁尾 */
+/* ?偏 */
 footer {
     background-color: var(--c-grey-dark);
     color: var(--c-white);
@@ -640,7 +567,7 @@ footer p {
     opacity: 0.6;
 }
 
-/* WhatsApp 浮動按鈕 */
+/* WhatsApp 瘚桀??? */
 #whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -675,7 +602,7 @@ footer p {
     filter: brightness(0) invert(1);
 }
 
-/* 免責聲明彈出視窗 - 保持不變 */
+/* ?痊?脫?敶閬? - 靽?銝? */
 .disclaimer-modal {
     display: none;
     position: fixed;
@@ -750,33 +677,13 @@ footer p {
     margin-top: 1.5rem;
 }
 
-/* 手機版免責聲明調整 */
-@media (max-width: 768px) {
-    .disclaimer-content {
-        max-height: 85vh;
-        margin: 10px;
-    }
-    
-    .disclaimer-body {
-        padding: 2rem 1.5rem;
-    }
-    
-    .disclaimer-close {
-        top: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
-}
 
-/* 強制隱藏所有外部導航垃圾 */
+/* 撘瑕?梯?????典??芸???*/
 #residential-menu,
 #property-menu,
 #residential,
 .toggle-input,
 .toggle,
-.arrow,
 .pmenu,
 [class*="residential"],
 [class*="property"][class*="menu"],
@@ -793,13 +700,13 @@ footer p {
     left: -9999px !important;
 }
 
-/* 手機版響應式設計 */
+/* ?????閮剛? */
 @media (max-width: 768px) {
     .header-container {
         padding: 0 15px;
     }
     
-    /* 隱藏電腦導航，顯示漢堡選單 */
+    /* ?梯??餉撠嚗＊蝷箸慰?⊿??*/
     .main-nav {
         display: none !important;
     }
@@ -808,10 +715,9 @@ footer p {
         display: flex !important;
     }
     
-    /* 調整佈局 */
-    .hero-video,
+    /* 隤踵雿? */
     .about-section,
-    .bohemian-collection,
+    .華潤置地,
     .contact {
         padding: 4rem 1.5rem;
     }
@@ -822,19 +728,20 @@ footer p {
         gap: 3rem;
     }
     
-    /* 🔥 修復圖片網格置中問題 */
+    /* ? 靽桀儔??蝬脫蝵桐葉?? */
     .collection-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
-        margin: 0 auto; /* 添加這行確保置中 */
-        justify-items: center; /* 添加這行讓網格項目置中 */
+        margin: 0 auto; /* 瘛餃???蝣箔?蝵桐葉 */
+        justify-items: center; /* 瘛餃???霈雯?潮??桃蔭銝?*/
     }
     
-    /* 確保圖片本身也置中 */
+    /* 蝣箔????祈澈銋蔭銝?*/
     .grid-item {
-        width: 100%;
-        max-width: 400px; /* 限制最大寬度 */
-        margin: 0 auto; /* 置中 */
+    position: relative;
+    height: 320px; /* 可按需要調整 */
+    overflow: hidden;
+    border-radius: 16px;
     }
     
     .features-grid {
@@ -852,7 +759,7 @@ footer p {
         max-width: 300px;
     }
     
-    /* 手機版免責聲明調整 */
+    /* ????鞎祈?矽??*/
     .disclaimer-content {
         width: 95%;
         max-height: 85vh;
@@ -872,7 +779,7 @@ footer p {
     }
 }
 
-/* 電腦版專用 */
+/* ?餉????*/
 @media (min-width: 769px) {
     .hamburger-menu,
     .mobile-menu,
@@ -890,12 +797,12 @@ footer p {
     }
 }
 
-/* 滾動鎖定修復 */
+/* 皛曉???靽桀儔 */
 body.disclaimer-active {
     overflow: hidden !important;
 }
 
-/* 確保外部頁面內容正常顯示 */
+/* 蝣箔?憭??批捆甇?虜憿舐內 */
 #page-content,
 #page-footer,
 #property-disclaimer {
@@ -904,26 +811,22 @@ body.disclaimer-active {
     opacity: 1 !important;
 }
 
-/* 左上角音樂控制 - 只在第一頁顯示 */
+/* 撌虫?閫璅??- ?芸蝚砌??＊蝷?*/
 .music-control-top {
-    position: absolute; /* 改為 absolute，相對於第一頁 */
+    position: absolute; /* ?寧 absolute嚗撠蝚砌???*/
     top: 5px;
     left: 20px;
     z-index: 9998;
 }
 
-/* 當不在第一頁時隱藏 */
-body:not(.on-home-page) .music-control-top {
-    display: none;
-}
 
 .music-toggle-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: transparent;
-    color: var(--c-black); /* 改為黑色 */
-    border: 2px solid rgba(0, 0, 0, 0.448); /* 淡黑色圈 */
+    color: var(--c-black); /* ?寧暺 */
+    border: 2px solid rgba(0, 0, 0, 0.448); /* 瘛⊿??脣? */
     cursor: pointer;
     font-size: 1.3rem;
     transition: all 0.3s ease;
@@ -938,7 +841,7 @@ body:not(.on-home-page) .music-control-top {
     background: rgba(0,0,0,0.1);
 }
 
-/* 喇叭關閉狀態 - 灰色喇叭 + 紅色斜號 */
+/* ??????- ?啗? + 蝝?? */
 .music-toggle-btn.muted::after {
     content: "";
     position: absolute;
@@ -951,7 +854,7 @@ body:not(.on-home-page) .music-control-top {
     border-radius: 2px;
 }
 
-/* 手機版調整 */
+/* ???矽??*/
 @media (max-width: 768px) {
     .music-control-top {
         top: 5px;
@@ -969,3 +872,149 @@ body:not(.on-home-page) .music-control-top {
         height: 2px;
     }
 }
+
+/* ?祈???敶閬?璅?? */
+.coming-soon-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-modal.active {
+    display: flex;
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* ???桃蔗 */
+}
+
+.coming-soon-content {
+    position: relative;
+    background: #f2f2f2; /* ??銝剔?瘛箇? */
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1;
+}
+
+.coming-soon-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a; /* ??脫?摮?*/
+    letter-spacing: 2px;
+}
+
+.coming-soon-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.coming-soon-close:hover {
+    color: #000;
+}
+
+/* THE STERLING 擐?嚗???????Heading嚗?湔?擐?閬死 */
+.hero-landing {
+    position: relative;
+    min-height: calc(100vh - 70px);
+    overflow: hidden;
+    background: #f4f0e7;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-centre {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 1.5rem 4rem;
+}
+
+.hero-logo-image {
+    width: min(680px, 70vw);
+    height: auto;
+    margin-bottom: 4.5rem;
+    filter: drop-shadow(0 8px 16px rgba(0, 92, 88, 0.12));
+}
+
+.hero-coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.15rem;
+    color: #007b78;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 92, 88, 0.1);
+}
+
+.hero-coming-soon strong {
+    font-size: clamp(2.4rem, 3.4vw, 3.7rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.hero-coming-soon span {
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+}
+
+@media (max-width: 768px) {
+    .hero-landing,
+    .hero-centre {
+        min-height: calc(100svh - 70px);
+    }
+
+    .hero-background {
+        object-position: 28% center;
+    }
+
+    .hero-logo-image {
+        width: min(460px, 88vw);
+        margin-bottom: 3.5rem;
+    }
+
+    .hero-coming-soon strong {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+    }
+
+    .hero-coming-soon span {
+        font-size: clamp(1.2rem, 5.5vw, 1.65rem);
+    }
+}
+

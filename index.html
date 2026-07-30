@@ -13,25 +13,29 @@
 
   <!-- 2. 您現有的轉換函式（然後才是這個） -->
   <script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
+function gtag_report_conversion(url) {
+    // 立即開啟 WhatsApp，避免被瀏覽器或追蹤程式阻擋
+    const whatsappWindow = window.open(url, '_blank');
+
+    // 同時發送 Google Ads 轉換追蹤
     gtag('event', 'conversion', {
-        'send_to': 'AW-17713083183/hM_LCLql_cEbEK_moP5B',
-        'event_callback': callback
+        'send_to': 'AW-17713083183/hM_LCLql_cEbEK_moP5B'
     });
+
+    // 若瀏覽器阻擋新分頁，改在目前頁面開啟
+    if (!whatsappWindow) {
+        window.location.href = url;
+    }
+
     return false;
-  }
-  </script>
+}
+</script>
   
     <!-- End Google Ads Tag -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUSTIN BOHEMIAN 瑧爾 | 西九高鐵文藝商圈</title>
+    <title>THE STERLING 叡璟 | 西九高鐵文藝商圈</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +48,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="#home">
-                    <span class="logo-text">AUSTIN BOHEMIAN</span>
+                    <span class="logo-text">THE STERLING</span>
                 </a>
             </div>
 
@@ -59,21 +63,21 @@
             <nav class="main-nav">
                 <div class="sales-nav">
                     <ul>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_brochure.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">售樓說明書</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_price2.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">價單</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_SalesArrangement.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">銷售安排</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_report2.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">成交紀錄冊</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_deed.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">公契</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_photo.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">鳥瞰照片</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_Tender.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">招標文件</a></li>
-                        <li><a href="https://cms.nwd.com.hk//html/tchi/property_ballotingresult.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">抽籤結果</a></li>
+                        <li><a href="#" class="coming-soon">售樓說明書</a></li>
+                        <li><a href="#" class="coming-soon">價單</a></li>
+                        <li><a href="#" class="coming-soon">銷售安排</a></li>
+                        <li><a href="#" class="coming-soon">成交紀錄冊</a></li>
+                        <li><a href="#" class="coming-soon">公契</a></li>
+                        <li><a href="#" class="coming-soon">鳥瞰照片</a></li>
+                        <li><a href="#" class="coming-soon">招標文件</a></li>
+                        <li><a href="#" class="coming-soon">抽籤結果</a></li>
                     </ul>
                 </div>
                 <div class="section-nav">
                     <ul>
                         <li><a href="#home">首頁</a></li>
                         <li><a href="#about">西九高鐵文藝商圈</a></li>
-                        <li><a href="#bohemian-collection">Bohemian Collection</a></li>
+                        <li><a href="#華潤置地">華潤置地</a></li>
                         <li><a href="#contact">聯絡我們</a></li>
                     </ul>
                 </div>
@@ -85,45 +89,51 @@
 <div class="mobile-menu">
     <ul>
         <li><a href="#contact" class="mobile-nav-link">聯絡我們</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_brochure.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">售樓說明書</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_price2.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">價單</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_SalesArrangement.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">銷售安排</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_Tender.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">招標文件</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_report2.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">成交紀錄冊</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_deed.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">公契</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_photo.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">鳥瞰照片</a></li>
-        <li><a href="https://cms.nwd.com.hk//html/tchi/property_ballotingresult.aspx?QXw7jD2r2h%2balRT18me3fL5OKRmVJJI0s%2fMzuBoqjKI%3d=" target="_blank">抽籤結果</a></li>
+        <li><a href="#" class="coming-soon">售樓說明書</a></li>
+        <li><a href="#" class="coming-soon">價單</a></li>
+        <li><a href="#" class="coming-soon">銷售安排</a></li>
+        <li><a href="#" class="coming-soon">招標文件</a></li>
+        <li><a href="#" class="coming-soon">成交紀錄冊</a></li>
+        <li><a href="#" class="coming-soon">公契</a></li>
+        <li><a href="#" class="coming-soon">鳥瞰照片</a></li>
+        <li><a href="#" class="coming-soon">抽籤結果</a></li>
     </ul>
 </div>
 <div class="menu-overlay"></div>
 
 
     <main>
-        <!-- 第1頁：單獨影片 -->
-        <section id="home" class="hero-video">
-            <video autoplay muted loop playsinline class="background-video">
-                <source src="videos/cover.mp4" type="video/mp4">
-                您的浏览器不支持视频播放。
-            </video>
-            <div class="video-overlay">
-                <div class="scroll-indicator">
-                    <span>向下滑動</span>
-                    <div class="arrow"></div>
-                </div>
-            </div>
+        <!-- 第1頁：主頁圖案 -->
+        <section id="home" class="hero-landing">
+    <img
+        src="images/the-sterling-pine-hero.png"
+        alt=""
+        class="hero-background"
+    >
 
-            <!-- 音樂控制放在第一頁內 -->
+    <div class="hero-centre">
+        <img
+            src="images/the-sterling-logo.png"
+            alt="THE STERLING 叡璟"
+            class="hero-logo-image"
+        >
+
+        <div class="hero-coming-soon">
+            <strong>即將推出</strong>
+            <span>Coming soon</span>
+        </div>
+    </div>
+
     <div class="music-control-top">
-        <button id="musicToggle" class="music-toggle-btn">🔈</button>
+        <button id="musicToggle" class="music-toggle-btn" type="button">
+            🔈
+        </button>
     </div>
 </section>
 
-<!-- 隱藏音樂播放器（放在body最後） -->
 <audio id="bgMusic" loop>
     <source src="music/relax-guitar.mp3" type="audio/mpeg">
 </audio>
-
-        </section>
 
         <!-- 第2頁：西九高鐵文藝商圈內容 -->
         <section id="about" class="about-section">
@@ -135,70 +145,73 @@
 
                 <div class="features-grid">
                     <div class="feature-card">
-                        <h3>優越地理位置</h3>
-                        <p>坐落西九高鐵文藝商圈，15分鐘直達核心商業區</p>
+                        <h3>三站四綫交通優勢</h3>
+                        <p>鐵路網絡：項目鄰近港鐵長沙灣站、荔枝角站及南昌站，坐擁市區核心交通樞紐。</p>
                     </div>
                     <div class="feature-card">
-                         <h3>匠心建築設計</h3>
-                        <p>國際知名建築師團隊操刀，融合現代簡約與傳統工藝</p>
+                         <h3>五星級綠化會所</h3>
+                        <p>超大型綠化會所：設有佔地超過 12 萬平方呎的綠化空間會所，在繁華市區中隨時享受悠閒的度假式慢活生活。</p>
                     </div>
                     <div class="feature-card">
-                        <h3>完善生活配套</h3>
-                        <p>購物、餐飲、教育、醫療一應俱全</p>
+                        <h3>周邊生活與娛樂圈</h3>
+                        <p>旗艦商場與文青地標：自設基超過 10 萬方呎的基座商場和緊貼南昌站旗艦商場 V Walk，滿足住戶日常餐飲與便利生活所需。</p>
                     </div>
                 </div>
 
                 <div class="about-cta">
-                    <a href="#bohemian-collection" class="btn primary">探索項目</a>
+                    <a href="#華潤置地" class="btn primary">探索項目</a>
                     <a href="#contact" class="btn secondary">預約參觀</a>
                 </div>
             </div>
         </section>
 
-        <!-- 第3頁：Bohemian Collection -->
-        <section id="bohemian-collection" class="bohemian-collection">
+        <!-- 第3頁：華潤置地 -->
+        <section id="華潤置地" class="華潤置地">
             <div class="collection-container">
                 <div class="collection-content">
-                    <h2>Bohemian Collection<sup>+</sup></h2>
-                    <h3>新世界發展型格住宅系列</h3>
+                    <h2>華潤置地<sup>+</sup></h2>
+                    <h3>華潤置地核心住宅系列</h3>
                     <div class="desc">
-                        新世界發展專為都市精英住戶而設的 BOHEMIAN COLLECTION<sup>+</sup>，
-                        一系列品味住宅傲踞港九，以氣質匠築主題，糅合極簡優雅與精緻傳統，
-                        線條律動與光影交織，雕塑結構與建材的風格樹立，
-                        創意與靈感如音符般自在流淌，凝聚成嶄新都會特色。
-                    </div>
+                    華潤置地匯聚多元都會生活版圖，從臨海而居的 Pano Harbour 澐璟，
+                    到坐落中環核心、提供頂級服務式住宅體驗的 ONE CHANCERY 贊善里一號，
+                    均以卓越地段、細緻設計與講究生活美學，回應當代品味人士對城市生活的想像。
+                    <br><br>
+                    項目糅合建築質感與貼心服務，在繁華與靜謐之間取得恰到好處的平衡，
+                    為住戶締造兼具私隱、便利與格調的理想居所。
+            </div>
+
 <div class="collection-cta">
-    <a href="https://www.youtube.com/embed/X3HuFFzg28w" class="btn" target="_blank">項目影片</a>
-    <a href="./documents/leaflet_bohemian-collection.pdf" class="btn" target="_blank">詳細簡介</a>
+    <a href="#" class="btn coming-soon">項目影片</a>
+    <a href="#" class="btn coming-soon">詳細簡介</a>
 </div> 
                 </div>
                 <div class="collection-grid">
                     <div class="grid-item">
-                        <img src="./images/artisan_house.jpg" alt="ARTISAN HOUSE 瑧蓺" class="grid-image">
+                        <img src="./images/Pano Harbour.jpg" alt="Pano Harbour 澐璟" class="grid-image">
                         <div class="overlay">
-                            <h3>ARTISAN HOUSE</h3>
-                            <p>瑧蓺 - 工匠藝術之家</p>
+                            <h3>Pano Harbour</h3>
+                            <p>澐璟 - 維港住宅地標</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="./images/timber_house.jpg" alt="TIMBER HOUSE 瑧樺" class="grid-image">
+                        <img src="./images/Pano Harbour_Living.jpg" alt="Pano Harbour 澐璟" class="grid-image">
                         <div class="overlay">
-                            <h3>TIMBER HOUSE</h3>
-                            <p>瑧樺 - 自然木質風格</p>
+                            <h3>Pano Harbour</h3>
+                            <p>澐璟 - 九龍東核心商業區</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="./images/bohemian_house.jpg" alt="BOHEMIAN HOUSE 瑧璈" class="grid-image">
+                        <img src="./images/PanoHarbour_Villa.jpg" alt="Pano Harbour 澐璟" class="grid-image">
                         <div class="overlay">
-                            <h3>BOHEMIAN HOUSE</h3>
-                            <p>瑧璈 - 波希米亞風情</p>
+                            <h3>Pano Harbour</h3>
+                            <p>澐璟 - 世界級臨海度假生活</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="./images/artisan_garden.jpg" alt="ARTISAN GARDEN 瑧尚" class="grid-image">
+                        <img src="./images/Pano Harbour_clubhouse.jpg" alt="Pano Harbour 澐璟" class="grid-image">
                         <div class="overlay">
-                            <h3>ARTISAN GARDEN</h3>
-                            <p>瑧尚 - 園藝工匠之美</p>
+                            <h3>Pano Harbour</h3>
+                            <p>澐璟 - 北歐風格雙會所</p>
                         </div>
                     </div>
                 </div>
@@ -209,7 +222,7 @@
 <section id="contact" class="contact">
     <div class="contact-container">
         <h2>聯絡我們</h2>
-        <p>預約參觀展示單位，親身體驗BOHEMIAN生活藝術</p>
+        <p>預約參觀展示單位，親身體驗西南九龍核心高尚慢活社區</p>
         <div class="cta">
             <a href="https://wa.me/85253435062?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%8D%B2%E5%BE%97%E6%9B%B4%E5%A4%9A%E3%80%8CAUSTIN%20BOHEMIAN%20%E7%91%A7%E7%88%BE%E3%80%8D%E8%A9%B3%E6%83%85%EF%BC%8C%E5%92%8C%E9%A0%90%E7%B4%84%E5%8F%83%E8%A7%80%E7%A4%BA%E7%AF%84%E5%96%AE%E4%BD%8D%E3%80%82" 
                onclick="return gtag_report_conversion('https://wa.me/85253435062?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%8D%B2%E5%BE%97%E6%9B%B4%E5%A4%9A%E3%80%8CAUSTIN%20BOHEMIAN%20%E7%91%A7%E7%88%BE%E3%80%8D%E8%A9%B3%E6%83%85%EF%BC%8C%E5%92%8C%E9%A0%90%E7%B4%84%E5%8F%83%E8%A7%80%E7%A4%BA%E7%AF%84%E5%96%AE%E4%BD%8D%E3%80%82');"
@@ -225,14 +238,14 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">AUSTIN BOHEMIAN</div>
+            <div class="footer-logo">THE STERLING</div>
             <div class="footer-disclaimer">
-                發展項目名稱：瑧爾 | 賣方：PROFIT JET HOLDINGS LIMITED<br>
-                賣方的控權公司：新世界發展有限公司 | 預計關鍵日期：2027年6月30日<br>
+                發展項目名稱：叡璟 | 賣方：Dragon Rider Development Limited<br>
+                賣方之控權公司：華潤（集團）有限公司、華潤股份有限公司、中國華潤有限公司 | 預計關鍵日期：2028 年11月25日（發展項目第1期）<br>
                 準買家如欲了解發展項目的詳情，請參閱售樓說明書。
             </div>
-            <p>本廣告/宣傳資料內載列的相片、圖像、繪圖或素描顯示純屬畫家對有關發展項目之想像。有關相片、圖像、繪固或素描並非按照比例繪畫及/或可能經過電腦修飾處理。準買家如欲了解發展項目的詳情，請參閱售樓說明書。賣方亦建議準買象到有關發展地盤作寞地考察，以對該發展地盤、其周邊地區環境及附近的公共設施有較佳了解。
-            。^上述門牌號數為臨時門牌號數，有待該發展項目建成時確認。發展項目名稱：瑧爾（下稱「發展項目」）。賣方：PROFIT JET HOLDINGS LIMITED。賣方的控權公司：新世界發展有限公司、PERFECT NOBLE INTERNATIONAL LIMITED*。發展項目的認可人士及該認可人士以其專業身份擔任經營人、董事或僱員的商號或法團：馬梁建築師事務所（香港）有限公司的區健斌先生。發展項目的承建商：協興建業有限公司。就發展項目中的住宅物業的出售而代表擁有人行事的律師事務所：胡關李羅律師行。已為發展項目的建造提供貸款或已承諾為該項建造提供融資的認可機構：不適用。已為發展項目的建造提供貸款的任何其他人：新世界金融有限公司。盡賣方所知發展項目的預計關鍵日期為2027年6月30日（「關鍵日期」指該項目在遵照經批准的建築圖則的情況下在各方面均屬完成的日期。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。）。賣方建議準買方參閱有關售樓說明書，以了解本發展項目的資料。於本網站的上次更新日期，本發展項目的售樓說明書尚未提供。* PERFECT NOBLE INTERNATIONAL LIMITED為英屬處女群島成立之有限法律責任的公司。+「BOHEMIAN COLLECTION」系列是指包括EIGHT SOUTH LANE、SKYPARK、瑧璈、瑧蓺、瑧樺、瑧尚、瑧博及瑧爾在內之不同住宅項目，各項目分別受其各自之批地文件管轄。上述之其他住宅項目與賣方、發展項目無關。「BOHEMIAN COLLECTION」僅屬推廣名稱，不會用於或出現於建築圖則、買賣合約、公契、轉讓契或其他業松或法律文件中。本頁旨在提供更多一手新盤資料及圖片檔案服務只供閱覽；不聲明或保證所提供訊息的準確性和完整性。在撰寫本頁時，雖已作出合理和謹慎的考慮，對資料的完整和準確性恕不保證、明示或暗示絕對無誤。本頁並不是發展項目之官方網站網頁。本頁內的圖片與發展商的樓盤並無任何關係。準買家如欲了解發展項目詳情，請參閱售樓說明書。資料有可能出現售價、現金或其他條件上的改動，或撤回而不經提前通知，並可能受特別條款約束。因使用此資料而直接或間接引致的損失或損毀。本頁恕不負責。本頁內所有內容包括一手新盤資料，僅供參考和借鑒，物業資料，一切以發展商最新公布為準。本頁面所提到房屋面積如無特別標示，均指實用面積。客戶應自行確保資料或，內容的完整性和準確性。所載資料僅供參考，並不構成要約或合約一部份。如有需要，瀏覽者應自行咨詢相關法律及/或專業意見。</p>
+            <p>△圖像並非於或自發展項目及╱或期數拍攝或以發展項目及/或期數作依據繪製或製作及可能與發展項目及╱或期數無關，並非反映發展項目及/或期數或其任何部分的外觀、景觀、設計、裝置、裝修物料、設備、設施及服務，亦不反映發展項目及╱或期數或其周邊地區環境及附近的設施。｜賣方：Dragon Rider Development Limited（註：賣方為於英屬維爾京群島成立的有限責任公司） | 賣方之控權公司：華潤（集團）有限公司、華潤股份有限公司、中國華潤有限公司 | 期數的認可人士：黃智健 | 期數的認可人士以其專業身分擔任經營人、董事或僱員的商號或法團：呂元祥建築師事務所（香港）有限公司 | 期數的承建商：Gammon Engineering & Construction Company Limited | 就期數中的住宅物業的出售而代表擁有人行事的律師事務所：國浩律師（香港）事務所 （發展項目第1期及發展項目第3期）／國浩律師（香港）事務所、貝克•麥堅時律師事務所（發展項目第2期及發展項目第4期）| 已為期數的建造提供貸款或已承諾為該項建造提供融資的認可機構：香港上海滙豐銀行有限公司（發展項目第1期）／中信銀行（國際）有限公司（發展項目第2期）／待定（發展項目第3期及發展項目第4期）| 已為期數的建造提供貸款的任何其他人：冠騎有限公司 | 盡賣方所知期數的預計關鍵日期為2028 年11月25日（發展項目第1期）／2028年12月25日（發展項目第2期）／2029年1月25日（發展項目第3期）／2029年2月25日（發展項目第4期）（「關鍵日期」指批地文件的條件就期數而獲符合的日期。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。）| </p>
+                <p>| 賣方建議準買方參閱有關售樓說明書，以了解發展項目及／或期數的資料。| 詳情請參閱售樓說明書。| 本廣告／宣傳資料僅供參考，並不構成亦不得詮釋成作出任何不論明示或隱含之要約、陳述、承諾、保證或合約條款（不論與景觀是否有關）。 | 賣方保留權利不時改動發展項目及／或期數或其任何部分之建築圖則及其他圖則、設計、裝置、裝修物料及設備等。裝置、裝修物料及設備之提供以買賣合約條款作準。發展項目及／或期數設計以相關政府部門最後批准者作準。發展項目及／或期數及其周邊地區日後可能出現改變。 | 住宅物業市場情況不時變化，準買方應衡量其財務情況及負擔能力及所有相關因素方作出決定購買或於何時購買任何住宅物業，於任何情況或時間，準買方絕不應以本廣告／宣傳資料之任何內容、資料或概念作依據或受其影響決定購買或於何時購買任何住宅物業。 | 截至本廣告更新日，尚未從地政總署署長取得可就發展項目第2期的住宅單位簽訂買賣合約之同意書。截至本廣告更新日，尚未從地政總署署長取得可就發展項目第3期的住宅單位簽訂買賣合約之同意書。截至本廣告更新日，尚未從地政總署署長取得可就發展項目第4期的住宅單位簽訂買賣合約之同意書。| 更新日期: 2026年7月28日</p>
         </div>
     </footer>
 
@@ -243,17 +256,25 @@
         <div class="disclaimer-body">
             <div class="disclaimer-text">
                 <p><strong>www.austinbohemians.com</strong></p>
-                <p>街道名稱及門牌號數 (臨時)：廣東道530 號<sup>^</sup></p>
-                <p>區域：油麻地</p>
-                <p>本廣告/宣傳資料內載列的相片、圖像、繪圖或素描顯示純屬畫家對有關發展項目之想像。有關相片、圖像、繪圖或素描並非按照比例繪畫及/或可能經過電腦修飾處理。準買家如欲了解發展項目的詳情，請參閱售樓說明書。賣方亦建議準買家到有關發展地盤作實地考察，以對該發展地盤、其周邊地區環境及附近的公共設施有較佳了解。</p>
+                <p>街道名稱及門牌號數 (臨時)：西南九龍發祥街8 號<sup>^</sup></p>
+                <p>區域：西南九龍</p>
+                <p>發展項目名稱：叡璟（「發展項目」）︳發展項目期數名稱：叡璟第1期稱為叡璟I。叡璟第2期稱為發展項目第2期。叡璟第3期稱為發展項目第3期。叡璟第4期稱為發展項目第4期。上述每一期數於本廣告稱為「期數」，而下文資料均適用於每一期數（除特別註明外）。區域：西南九龍| 期數所位於的街道名稱及門牌號數：發祥街西8號# | 賣方為施行《一手住宅物業銷售條例》第2部而就期數指定的互聯網網站網址：WWW.THESTERLING.HK | 本廣告╱宣傳資料內載列的相片、圖像、繪圖或素描顯示純屬畫家對有關發展項目之想像。有關相片、圖像、繪圖或素描並非按照比例繪畫及╱或可能經過電腦修飾處理。準買家如欲了解發展項目的詳情，請參閱售樓說明書。賣方亦建議準買家到有關發展地盤作實地考察，以對該發展地盤、其周邊地區環境及附近的公共設施有較佳了解。| #此臨時門牌號數有待期數建成時確認。 本頁並不是發展項目之官方網站網頁。本頁內的圖片與發展商的樓盤並無任何關係。資料有可能出現售價、現金或其他條件上的改動，或撤回而不經提前通知，並可能受特別條款約束。因使用此資料而直接或間接引致的損失或損毀。本頁恕不負責。本頁內所有內容包括一手新盤資料，僅供參考和借鑒，物業資料，一切以發展商最新公布為準。本頁面所提到房屋面積如無特別標示，均指實用面積。客戶應自行確保資料或，內容的完整性和準確性。所載資料僅供參考，並不構成要約或合約一部份。如有需要，瀏覽者應自行咨詢相關法律及/或專業意見。</p>
 
-                <p>發展項目名稱：瑧爾 (下稱「發展項目」)。賣方：PROFITS JET HOLDINGS LIMITED。賣方的控權公司：新世界發展有限公司、PERFECTS NOBLE INTERNATIONAL LIMITED*。發展項目的認可人士及該認可人士以其專業身份擔任經營人、董事或僱員的商號或法團：馬梁建築師事務所(香港)有限公司的區健斌先生。發展項目的承建商：協興建業有限公司。就發展項目中的住宅物業的出售而代表擁有人行事的律師事務所：胡關李羅律師行。已為發展項目的建造提供貸款或已承諾為該項建造提供融資的認可機構：不適用。本頁旨在提供更多一手新盤資料及圖片檔案服務只供閱覽；不聲明或保證所提供訊息的準確性和完整性。在撰寫本頁時，雖已作出合理和謹慎的考慮，對資料的完整和準確性恕不保證、明示或暗示絕對無誤。本頁並不是發展項目之官方網站網頁。本頁內的圖片與發展商的樓盤並無任何關係。準買家如欲了解發展項目詳情，請參閱售樓說明書。資料有可能出現售價、現金或其他條件上的改動，或撤回而不經提前通知，並可能受特別條款約束。因使用此資料而直接或間接引致的損失或損毀。本頁恕不負責。本頁內所有內容包括一手新盤資料，僅供參考和借鑒，物業資料，一切以發展商最新公布為準。已為發展項目的建造提供貸款的任何其他人：新世界金融有限公司。本廣告由「瑧爾」之賣方發布。盡賣方所知發展項目的預計關鍵日期為2027年6月30日(「關鍵日期」指該項目在遵照經批准的建築圖則的情況下在各方面均屬完成的日期。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。)。賣方建議準買方參閱有關售樓說明書，以了解本發展項目的資料。於本網站的上次更新日期，本發展項目的售樓說明書尚未提供。</p>
+                <p>△圖像並非於或自發展項目及╱或期數拍攝或以發展項目及/或期數作依據繪製或製作及可能與發展項目及╱或期數無關，並非反映發展項目及/或期數或其任何部分的外觀、景觀、設計、裝置、裝修物料、設備、設施及服務，亦不反映發展項目及╱或期數或其周邊地區環境及附近的設施。｜賣方：Dragon Rider Development Limited（註：賣方為於英屬維爾京群島成立的有限責任公司） | 賣方之控權公司：華潤（集團）有限公司、華潤股份有限公司、中國華潤有限公司 | 期數的認可人士：黃智健 | 期數的認可人士以其專業身分擔任經營人、董事或僱員的商號或法團：呂元祥建築師事務所（香港）有限公司 | 期數的承建商：Gammon Engineering & Construction Company Limited | 就期數中的住宅物業的出售而代表擁有人行事的律師事務所：國浩律師（香港）事務所 （發展項目第1期及發展項目第3期）／國浩律師（香港）事務所、貝克•麥堅時律師事務所（發展項目第2期及發展項目第4期）| 已為期數的建造提供貸款或已承諾為該項建造提供融資的認可機構：香港上海滙豐銀行有限公司（發展項目第1期）／中信銀行（國際）有限公司（發展項目第2期）／待定（發展項目第3期及發展項目第4期）| 已為期數的建造提供貸款的任何其他人：冠騎有限公司 | 盡賣方所知期數的預計關鍵日期為2028 年11月25日（發展項目第1期）／2028年12月25日（發展項目第2期）／2029年1月25日（發展項目第3期）／2029年2月25日（發展項目第4期）（「關鍵日期」指批地文件的條件就期數而獲符合的日期。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。）| </p>
+                <p>| 賣方建議準買方參閱有關售樓說明書，以了解發展項目及／或期數的資料。| 詳情請參閱售樓說明書。| 本廣告／宣傳資料僅供參考，並不構成亦不得詮釋成作出任何不論明示或隱含之要約、陳述、承諾、保證或合約條款（不論與景觀是否有關）。 | 賣方保留權利不時改動發展項目及／或期數或其任何部分之建築圖則及其他圖則、設計、裝置、裝修物料及設備等。裝置、裝修物料及設備之提供以買賣合約條款作準。發展項目及／或期數設計以相關政府部門最後批准者作準。發展項目及／或期數及其周邊地區日後可能出現改變。 | 住宅物業市場情況不時變化，準買方應衡量其財務情況及負擔能力及所有相關因素方作出決定購買或於何時購買任何住宅物業，於任何情況或時間，準買方絕不應以本廣告／宣傳資料之任何內容、資料或概念作依據或受其影響決定購買或於何時購買任何住宅物業。 | 截至本廣告更新日，尚未從地政總署署長取得可就發展項目第2期的住宅單位簽訂買賣合約之同意書。截至本廣告更新日，尚未從地政總署署長取得可就發展項目第3期的住宅單位簽訂買賣合約之同意書。截至本廣告更新日，尚未從地政總署署長取得可就發展項目第4期的住宅單位簽訂買賣合約之同意書。| 更新日期: 2026年7月28日</p>
 
-                <p class="footnote">* PERFECTS NOBLE INTERNATIONAL LIMITED為英屬處女群島成立之有限法律責任的公司。</p>
-
-                <p class="footnote">+「BOHEMIAN COLLECTION」系列是指包括EIGHT SOUTH LANE、SKYPARK、瑧璈、瑧蓺、瑧樺、瑧尚、瑧博及瑧爾在內之不同住宅項目，各項目分別受其各自之批地文件管轄。上述之其他住宅項目與賣方、發展項目無關。「BOHEMIAN COLLECTION」僅屬推廣名稱，不會用於或出現於建築圖則、買賣合約、公契、轉讓契或其他業權或法律文件中。</p>
+    
             </div>
         </div>
+    </div>
+</div>
+
+<!-- 敬請期待彈出視窗 -->
+<div id="comingSoonModal" class="coming-soon-modal">
+    <div class="coming-soon-overlay"></div>
+    <div class="coming-soon-content">
+        <button class="coming-soon-close" id="comingSoonClose">&times;</button>
+        <div class="coming-soon-text">敬請期待</div>
     </div>
 </div>
 
